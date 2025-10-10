@@ -50,7 +50,7 @@ class NavNode(Node):
 
         self.get_logger().info(f'Sending goal: x={x}, y={y}, yaw={yaw}')
 
-        # ✅ Set moving flag immediately to prevent other goals firing
+        #Set moving flag immediately to prevent other goals firing
         self.isMoving = True  
 
         send_future = self._client.send_goal_async(goal_msg)
@@ -90,28 +90,3 @@ class NavNode(Node):
             self.send_goal(x, y, yaw)
         else:
             self.get_logger().info('No more goals queued')
-
-
-# def main(args=None):
-#     rclpy.init(args=args)
-#     node = NavNode()
-
-#     # Example: add multiple goals
-#     node.add_goal(1.0, 1.0, 0.0)
-#     node.add_goal(2.0, 2.0, 0.0)
-#     node.add_goal(-2.0, -2.0, 0.0)
-
-#     # Example: set a callback
-#     node.set_post_goal_callback(lambda: node.get_logger().info("Taking soil sample..."))
-
-#     try:
-#         rclpy.spin(node)
-#     except KeyboardInterrupt:
-#         pass
-#     finally:
-#         node.destroy_node()
-#         rclpy.shutdown()
-
-
-# if __name__ == '__main__':
-#     main()

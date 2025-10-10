@@ -51,4 +51,7 @@ class NodeTypes:
                 result = child.tick()
                 if result == Status.SUCCESS:
                     return Status.SUCCESS
+                elif result == Status.RUNNING:
+                    return Status.RUNNING
             return Status.FAILURE
+

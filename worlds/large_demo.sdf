@@ -299,7 +299,7 @@
       <scale>2 2 2</scale>
     </include>
 
-  <include>
+  <!-- <include>
     <uri>https://fuel.gazebosim.org/1.0/MovAi/models/Tugbot-charging-station</uri>
     <name>tugbot_charging_station</name>
     <pose>-1 0 0 0 0 0</pose>
@@ -308,7 +308,7 @@
     <uri>https://fuel.gazebosim.org/1.0/MovAi/models/Tugbot-charging-station</uri>
     <name>tugbot_charging_station_2</name>
     <pose>-1 1 0 0 0 0</pose>
-  </include>
+  </include> -->
 
 
   </world>

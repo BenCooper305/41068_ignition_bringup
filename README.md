@@ -40,4 +40,7 @@ Now install this package:
 * And similarly, the larger world, and with SLAM and navigation:
   ```bash
   ros2 launch 41068_ignition_bringup 41068_ignition.launch.py slam:=true nav2:=true rviz:=true world:=large_demo #map:=/maps/my_map.yaml
+
+  #run from src/python folder
+  python3 mission.py
   ```
